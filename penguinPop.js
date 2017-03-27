@@ -25,6 +25,24 @@ var heOrShe = function(x) {
 	}
 };
 
+var doMathForPebbles = function() {
+    var a = Math.floor(Math.random() * 10) + 1;
+    var b = Math.floor(Math.random() * 10) + 1;
+    var op = ["*", "+", "-"][Math.floor(Math.random()*4)];
+    console.log("How much is " + a + " " + op + " " + b + "?");
+    prompt.question("", (inputAnswer) => {
+    	if (inputAnswer == eval( a + op + b)) {
+			console.log("Correct!");
+			penguinPebbles +=5;
+			menuOptions();
+		} else {
+			console.log("Incorrect!");
+			penguinPebbles -=5;
+			menuOptions();
+		}
+	});
+};
+
 var getPenguinGender = function() {
 	prompt.question("What's your penguins gender?: ", (inputPenguinsGender) => {
 		inputPenguinsGenderLC = inputPenguinsGender.toLowerCase();
@@ -95,20 +113,6 @@ var menuChoose = function() {
             menuOptions();
         }
     });    
-};
-
-var doMathForPebbles = function() {
-	prompt.question("What's 2+2: ", (inputAnswer) => {
-		if (inputAnswer == "4") {
-			console.log("Correct!");
-			penguinPebbles +=5;
-			menuOptions();
-		} else {
-			console.log("Incorrect!");
-			penguinPebbles -=5;
-			menuOptions();
-		}
-	});
 };
 
 var doTrick = function() {
