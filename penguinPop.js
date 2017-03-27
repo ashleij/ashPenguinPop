@@ -75,7 +75,7 @@ var getPenguinType = function() {
 			penguinsType = "rockhopper";
 			populatePenguinObject();
 		} else {
-			console.log("Please enter a valid type.");
+			console.log("Please enter 'emperor', 'gentoo', or 'rockhopper'.");
 			getPenguinType();
 		}		
  	});
