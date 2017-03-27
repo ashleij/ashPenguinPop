@@ -17,6 +17,14 @@ var usersPenguin = {
 	type: "undefined",
 };
 
+var heOrShe = function(x) {
+	if (x == "female") {
+		return "She";
+	} else if (x == "male") {
+		return "He";
+	}
+};
+
 var getPenguinGender = function() {
 	prompt.question("What's your penguins gender?: ", (inputPenguinsGender) => {
 		inputPenguinsGenderLC = inputPenguinsGender.toLowerCase();
@@ -80,7 +88,7 @@ var menuChoose = function() {
         } else if (menuChoice == "4") {
        		doAwesomeTrick();
         } else if (menuChoice == "5") {
-       		console.log("Goodbye!");
+       		console.log("Goodbye, " + playersName + "! " + usersPenguin.name + " will see you again soon, right? :)");
        		prompt.close();
         } else {
         	console.log("Please choose a valid option!");
@@ -153,7 +161,7 @@ var doAwesomeTrick = function() {
 			spend50LC = spend50.toLowerCase();
 			if (spend50LC == "yes") {
 				penguinPebbles-=50;
-				console.log(usersPenguin.name + " orders a pizza, breadsticks, and a soda! Thanks, " + playersName + "!");
+				console.log(usersPenguin.name + " orders a pizza, breadsticks, and a soda! " + heOrShe(usersPenguin.gender) + " was even able to tip the driver! Thanks, " + playersName + "!");
 				menuOptions();
 			} else if (spend50LC == "no") {
 				console.log("No pebbles spent. Returning to main menu.");
