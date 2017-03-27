@@ -177,10 +177,29 @@ var doAwesomeTrick = function() {
 	}
 };
 
-prompt.question("What's your name?: ", (inputPlayersName) => {
-	playersName = inputPlayersName;
+var getPenguinName = function() {
 	prompt.question("What will you name your penguin?: ", (inputPenguinsName) => {
+		if (inputPenguinsName.length <= 10) {
 		penguinsName = inputPenguinsName;
 		getPenguinGender();
+		} else {
+			console.log("Please use 10 or less characters in the name.");
+			getPenguinName();
+		}
 	});
-});
+
+};
+
+var getPlayersName = function() {
+	prompt.question("What's your name?: ", (inputPlayersName) => {
+		if (inputPlayersName.length <= 10) {
+			playersName = inputPlayersName;
+			getPenguinName();
+		} else {
+			console.log("Please use 10 or less characters in the name.");
+			getPlayersName();
+		}
+	});
+};
+
+getPlayersName();
