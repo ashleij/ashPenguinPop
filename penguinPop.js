@@ -10,6 +10,7 @@ var penguinsName;
 var penguinsGender;
 var penguinsType;
 var penguinPebbles = 0;
+var inputPenguinsGenderLC;
 
 var usersPenguin = {
 	name: "undefined",
@@ -28,7 +29,7 @@ var heOrShe = function(x) {
 var doMathForPebbles = function() {
     var a = Math.floor(Math.random() * 10) + 1;
     var b = Math.floor(Math.random() * 10) + 1;
-    var op = ["*", "+", "-"][Math.floor(Math.random()*4)];
+    var op = ["*", "+", "-"][Math.floor(Math.random()*3)];
     console.log("How much is " + a + " " + op + " " + b + "?");
     prompt.question("", (inputAnswer) => {
     	if (inputAnswer == eval( a + op + b)) {
@@ -47,7 +48,7 @@ var getPenguinGender = function() {
 	prompt.question("What's your penguins gender?: ", (inputPenguinsGender) => {
 		inputPenguinsGenderLC = inputPenguinsGender.toLowerCase();
 		if (inputPenguinsGenderLC == "male" || inputPenguinsGenderLC == "female") {
-			penguinsGender = inputPenguinsGender;
+			penguinsGender = inputPenguinsGenderLC;
 			getPenguinType();
 		} else {
 			console.log("Please use the words 'male' or 'female'.");
