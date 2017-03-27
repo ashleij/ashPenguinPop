@@ -11,6 +11,10 @@ var penguinsGender;
 var penguinsType;
 var penguinPebbles = 0;
 var inputPenguinsGenderLC;
+var inputPenguinsTypeLC;
+var spend20LC;
+var spend35LC;
+var spend50LC;
 
 var usersPenguin = {
 	name: "undefined",
@@ -186,11 +190,11 @@ var doAwesomeTrick = function() {
 
 var getPenguinName = function() {
 	prompt.question("What will you name your penguin?: ", (inputPenguinsName) => {
-		if (inputPenguinsName.length <= 10) {
+		if (inputPenguinsName.length > 1 && inputPenguinsName.length <= 10) {
 		penguinsName = inputPenguinsName;
 		getPenguinGender();
 		} else {
-			console.log("Please use 10 or less characters in the name.");
+			console.log("Please use 2-10 characters in the name.");
 			getPenguinName();
 		}
 	});
@@ -199,11 +203,11 @@ var getPenguinName = function() {
 
 var getPlayersName = function() {
 	prompt.question("What's your name?: ", (inputPlayersName) => {
-		if (inputPlayersName.length <= 10) {
+		if (inputPlayersName.length > 1 && inputPlayersName.length <= 10) {
 			playersName = inputPlayersName;
 			getPenguinName();
 		} else {
-			console.log("Please use 10 or less characters in the name.");
+			console.log("Please use 2-10 characters in the penguin's name.");
 			getPlayersName();
 		}
 	});
