@@ -59,13 +59,15 @@ var getPenguinGender = function() {
 
 var getPenguinType = function() {
 	prompt.question("Is your penguin an emperor, gentoo, or rockhopper?: ", (inputPenguinsType) => {
-		if (inputPenguinsType == "emperor") {
+		inputPenguinsTypeLC = inputPenguinsType.toLowerCase();
+
+		if (inputPenguinsTypeLC == "emperor") {
 			penguinsType = "emperor";
 			populatePenguinObject();
-		} else if (inputPenguinsType == "gentoo") {
+		} else if (inputPenguinsTypeLC == "gentoo") {
 			penguinsType = "gentoo";
 			populatePenguinObject();
-		} else if (inputPenguinsType == "rockhopper") {
+		} else if (inputPenguinsTypeLC == "rockhopper") {
 			penguinsType = "rockhopper";
 			populatePenguinObject();
 		} else {
