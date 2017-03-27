@@ -118,7 +118,7 @@ var menuChoose = function() {
 
 var doTrick = function() {
 	if (penguinPebbles >= 20) {
-		prompt.question("Are you sure you want to spend 20 penguin pebbles?", (spend20) => {
+		prompt.question("Are you sure you want to spend 20 penguin pebbles? ('yes' or 'no')", (spend20) => {
 			spend20LC = spend20.toLowerCase();
 			if (spend20LC == "yes") {
 				penguinPebbles-=20;
@@ -140,7 +140,7 @@ var doTrick = function() {
 
 var doCoolerTrick = function() {
 	if (penguinPebbles >= 35) {
-		prompt.question("Are you sure you want to spend 35 penguin pebbles?", (spend35) => {
+		prompt.question("Are you sure you want to spend 35 penguin pebbles? ('yes' or 'no')", (spend35) => {
 			spend35LC = spend35.toLowerCase();
 			if (spend35LC == "yes") {
 				penguinPebbles-=35;
@@ -162,7 +162,7 @@ var doCoolerTrick = function() {
 
 var doAwesomeTrick = function() {
 	if (penguinPebbles >= 50) {
-		prompt.question("Are you sure you want to spend 50 penguin pebbles?", (spend50) => {
+		prompt.question("Are you sure you want to spend 50 penguin pebbles? ('yes' or 'no')", (spend50) => {
 			spend50LC = spend50.toLowerCase();
 			if (spend50LC == "yes") {
 				penguinPebbles-=50;
