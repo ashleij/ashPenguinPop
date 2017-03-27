@@ -139,7 +139,7 @@ var doTrick = function() {
 			}
 		});
 	} else {
-		console.log("You need 20 penguin points first!");
+		console.log("You need 20 penguin pebbles first!");
 		menuOptions();
 	}
 };
@@ -161,7 +161,7 @@ var doCoolerTrick = function() {
 			}
 		});
 	} else {
-		console.log("You need 35 penguin points first!");
+		console.log("You need 35 penguin pebbles first!");
 		menuOptions();
 	}
 };
@@ -183,7 +183,7 @@ var doAwesomeTrick = function() {
 			}
 		});
 	} else {
-		console.log("You need 50 penguin points first!");
+		console.log("You need 50 penguin pebbles first!");
 		menuOptions();
 	}
 };
